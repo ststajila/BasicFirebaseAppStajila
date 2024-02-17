@@ -76,7 +76,7 @@
                                                 <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="Jz3-rw-vxm"/>
                                                 <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="b6P-CF-2r8">
                                                     <connections>
-                                                        <action selector="saveAction:" destination="pV0-vQ-kZT" id="jDA-He-edn"/>
+                                                        <action selector="saveAction:" destination="pV0-vQ-kZT" id="tre-WU-UAt"/>
                                                     </connections>
                                                 </barButtonItem>
                                             </navigationItem>

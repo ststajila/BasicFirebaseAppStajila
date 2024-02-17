@@ -10,12 +10,16 @@ class Delegate{
 }
 
 import UIKit
+import FirebaseCore
+import FirebaseDatabase
 
 class ViewController: UIViewController, UITableViewDelegate {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
     }
 
 
