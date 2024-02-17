@@ -23,6 +23,7 @@
 		850A5FE52B806A3F00ACA0C3 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 850A5FE42B806A3F00ACA0C3 /* FirebaseDatabase */; };
 		850A5FE72B806A3F00ACA0C3 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 850A5FE62B806A3F00ACA0C3 /* FirebaseDatabaseSwift */; };
 		850A5FE92B806A3F00ACA0C3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 850A5FE82B806A3F00ACA0C3 /* FirebaseFirestore */; };
+		850A5FEB2B81378800ACA0C3 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850A5FEA2B81378800ACA0C3 /* EmployeeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		14D1D08B2B7FB16C00669310 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		14D1D08D2B7FB69E00669310 /* AddAnEmploeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnEmploeeViewController.swift; sourceTree = "<group>"; };
 		850A5FDF2B8069C100ACA0C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		850A5FEA2B81378800ACA0C3 /* EmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				14D1D05D2B7FB13B00669310 /* SceneDelegate.swift */,
 				14D1D08D2B7FB69E00669310 /* AddAnEmploeeViewController.swift */,
 				14D1D05F2B7FB13B00669310 /* ViewController.swift */,
+				850A5FEA2B81378800ACA0C3 /* EmployeeCell.swift */,
 				14D1D08B2B7FB16C00669310 /* Employee.swift */,
 				14D1D0612B7FB13B00669310 /* Main.storyboard */,
 				14D1D0642B7FB13C00669310 /* Assets.xcassets */,
@@ -288,6 +291,7 @@
 				14D1D08E2B7FB69E00669310 /* AddAnEmploeeViewController.swift in Sources */,
 				14D1D0602B7FB13B00669310 /* ViewController.swift in Sources */,
 				14D1D08C2B7FB16C00669310 /* Employee.swift in Sources */,
+				850A5FEB2B81378800ACA0C3 /* EmployeeCell.swift in Sources */,
 				14D1D05C2B7FB13B00669310 /* AppDelegate.swift in Sources */,
 				14D1D05E2B7FB13B00669310 /* SceneDelegate.swift in Sources */,
 			);

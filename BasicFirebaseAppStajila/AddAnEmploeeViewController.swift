@@ -24,9 +24,11 @@ class AddAnEmploeeViewController: UIViewController {
         
         var empl = Employee(name: firstNameOutlet.text!, lastName: lastNameOutlet.text!, age: 17, phoneNumber: phoneNumberOutlet.text!, email: emailOutlet.text!)
         
-        Delegate.employees.append(empl)
-        
         empl.saveToDatabase()
         
+    }
+    @IBAction func cancelAction(_ sender: Any) {
+        Delegate.tableView.reloadData()
+        self.dismiss(animated: true, completion: nil)
     }
 }

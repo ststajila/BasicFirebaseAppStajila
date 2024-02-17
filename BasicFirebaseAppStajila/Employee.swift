@@ -26,10 +26,38 @@ class Employee{
         self.email = email
     }
     
+    init(dict: [String:Any]){
+        if let n = dict["firstName"] as? String{
+            name = n
+        }else{
+            name = ""
+        }
+        if let ln = dict["lastName"] as? String{
+            lastName = ln
+        }else{
+            lastName = ""
+        }
+        if let a = dict["age"] as? Int{
+            age = a
+        }else{
+            age = 0
+        }
+        if let p = dict["phoneNumber"] as? String{
+            phoneNumber = p
+        }else{
+            phoneNumber = ""
+        }
+        if let e = dict["email"] as? String{
+            email = e
+        }else{
+            email = ""
+        }
+    }
+    
     func saveToDatabase(){
-        var dict = ["firstName": name, "lastName": lastName, "age": 17, "phoneNumber": phoneNumber, "email": email] as [String : Any]
-        ref.child("employeeList").setValue(dict)
-        ref.child("employeeList").key ?? "0"
+        let dict = ["firstName": name, "lastName": lastName, "age": 17, "phoneNumber": phoneNumber, "email": email] as [String : Any]
+        Delegate.ref.child("employeeList").childByAutoId().setValue(dict)
+        Delegate.ref.child("employeeList").key ?? "0"
         
     }
 }
