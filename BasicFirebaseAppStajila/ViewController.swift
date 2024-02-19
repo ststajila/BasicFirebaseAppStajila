@@ -33,8 +33,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         Delegate.ref.child("employeeList").observe(.childAdded) { DataSnapshot in
             let dictionary = DataSnapshot.value as! [String:Any]
             var e = Employee(dict: dictionary)
+            e.key = DataSnapshot.key
             Delegate.employees.append(e)
             self.tableViewOutlet.reloadData()
+        }
+        
+        Delegate.ref.child("employeeList").observe(.childRemoved) { DataSnapshot in
+            
+                for i in 0...Delegate.employees.count{
+                    if Delegate.employees[i].key == DataSnapshot.key{
+                        Delegate.employees.remove(at: i)
+                        Delegate.tableView.reloadData()
+                        break
+                    }
+                }
         }
         
     }
@@ -54,6 +66,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell?.emailOutlet.text! = "\(Delegate.employees[indexPath.row].email)"
         
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            
+            Delegate.employees[indexPath.row].deleteFromDatabase()
+            Delegate.employees.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
+        
     }
 
 }

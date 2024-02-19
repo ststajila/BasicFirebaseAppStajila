@@ -60,4 +60,8 @@ class Employee{
         Delegate.ref.child("employeeList").key ?? "0"
         
     }
+    
+    func deleteFromDatabase(){
+        Delegate.ref.child("employeeList").child(key).removeValue()
+    }
 }

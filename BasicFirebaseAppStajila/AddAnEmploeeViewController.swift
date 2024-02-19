@@ -13,18 +13,26 @@ class AddAnEmploeeViewController: UIViewController {
     @IBOutlet weak var ageOutlet: UITextField!
     @IBOutlet weak var phoneNumberOutlet: UITextField!
     @IBOutlet weak var emailOutlet: UITextField!
+    var alertController = UIAlertController(title: "Warning", message: "Age field accepts only a whole number!", preferredStyle: .alert)
+    var alertAction = UIAlertAction(title: "Ok", style: .default)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        alertController.addAction(alertAction)
     }
     
     @IBAction func saveAction(_ sender: Any) {
         
-        var empl = Employee(name: firstNameOutlet.text!, lastName: lastNameOutlet.text!, age: 17, phoneNumber: phoneNumberOutlet.text!, email: emailOutlet.text!)
-        
-        empl.saveToDatabase()
+        if let a = Int(ageOutlet.text!){
+            var empl = Employee(name: firstNameOutlet.text!, lastName: lastNameOutlet.text!, age: a, phoneNumber: phoneNumberOutlet.text!, email: emailOutlet.text!)
+            
+            empl.saveToDatabase()
+            
+            self.dismiss(animated: true)
+        } else{
+            present(alertController, animated: true)
+        }
         
     }
     @IBAction func cancelAction(_ sender: Any) {
