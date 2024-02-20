@@ -55,7 +55,7 @@ class Employee{
     }
     
     func saveToDatabase(){
-        let dict = ["firstName": name, "lastName": lastName, "age": 17, "phoneNumber": phoneNumber, "email": email] as [String : Any]
+        let dict = ["firstName": name, "lastName": lastName, "age": age, "phoneNumber": phoneNumber, "email": email] as [String : Any]
         Delegate.ref.child("employeeList").childByAutoId().setValue(dict)
         Delegate.ref.child("employeeList").key ?? "0"
         

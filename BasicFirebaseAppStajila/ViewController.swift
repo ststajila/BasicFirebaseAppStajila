@@ -40,7 +40,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         Delegate.ref.child("employeeList").observe(.childRemoved) { DataSnapshot in
             
-                for i in 0...Delegate.employees.count{
+            for i in 0..<Delegate.employees.count{
                     if Delegate.employees[i].key == DataSnapshot.key{
                         Delegate.employees.remove(at: i)
                         Delegate.tableView.reloadData()

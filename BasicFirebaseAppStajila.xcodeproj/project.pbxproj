@@ -59,7 +59,7 @@
 		14D1D07E2B7FB13C00669310 /* BasicFirebaseAppStajilaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicFirebaseAppStajilaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		14D1D08B2B7FB16C00669310 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		14D1D08D2B7FB69E00669310 /* AddAnEmploeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnEmploeeViewController.swift; sourceTree = "<group>"; };
-		850A5FDF2B8069C100ACA0C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		850A5FDF2B8069C100ACA0C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		850A5FEA2B81378800ACA0C3 /* EmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

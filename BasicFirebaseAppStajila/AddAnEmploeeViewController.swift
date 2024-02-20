@@ -8,30 +8,39 @@
 import UIKit
 
 class AddAnEmploeeViewController: UIViewController {
+    
     @IBOutlet weak var firstNameOutlet: UITextField!
     @IBOutlet weak var lastNameOutlet: UITextField!
     @IBOutlet weak var ageOutlet: UITextField!
     @IBOutlet weak var phoneNumberOutlet: UITextField!
     @IBOutlet weak var emailOutlet: UITextField!
-    var alertController = UIAlertController(title: "Warning", message: "Age field accepts only a whole number!", preferredStyle: .alert)
+    var alertController = UIAlertController(title: "Warning", message: "Age field is required and accepts only a whole number!", preferredStyle: .alert)
     var alertAction = UIAlertAction(title: "Ok", style: .default)
+    
+    var invalidNameFormatAlertController = UIAlertController(title: "Warning", message: "First and Last Name are required", preferredStyle: .alert)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         alertController.addAction(alertAction)
+        invalidNameFormatAlertController.addAction(alertAction)
+
     }
     
     @IBAction func saveAction(_ sender: Any) {
         
-        if let a = Int(ageOutlet.text!){
-            var empl = Employee(name: firstNameOutlet.text!, lastName: lastNameOutlet.text!, age: a, phoneNumber: phoneNumberOutlet.text!, email: emailOutlet.text!)
-            
-            empl.saveToDatabase()
-            
-            self.dismiss(animated: true)
-        } else{
-            present(alertController, animated: true)
+        if firstNameOutlet.text != "" && lastNameOutlet.text != ""{
+            if let a = Int(ageOutlet.text!){
+                var empl = Employee(name: firstNameOutlet.text!, lastName: lastNameOutlet.text!, age: a, phoneNumber: phoneNumberOutlet.text!, email: emailOutlet.text!)
+                
+                empl.saveToDatabase()
+                
+                self.dismiss(animated: true)
+            } else{
+                present(alertController, animated: true)
+            }
+        }else{
+            present(invalidNameFormatAlertController, animated: true)
         }
         
     }
